@@ -2,8 +2,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  background-image: url("IMG_0021.PNG");
+  background-size: cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  min-height:100vh;
+  color:white;
   line-height: 1.5;
 }
 

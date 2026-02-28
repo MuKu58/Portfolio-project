@@ -1,0 +1,101 @@
+/* Basis */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Container = netjes centreren zonder flexbox/grid */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header */
+.site-header {
+  background-color: #111;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+  padding-top: 8px;
+}
+
+/* Nav */
+.nav {
+  margin-top: 8px;
+  padding-bottom: 8px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background-color: #fff;
+  padding: 24px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Sections */
+.section {
+  padding: 18px 0;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+/* List */
+.list {
+  padding-left: 18px;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.link {
+  color: #0047AB;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #ddd;
+  padding: 12px 0;
+}

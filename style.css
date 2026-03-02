@@ -1,105 +1,189 @@
-/* Basis */
+/* ========== BASIS / RESET ========== */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("IMG_0021.PNG");
+
+  /* Achtergrond */
+  background-image: url("./IMG_0021.PNG");
   background-size: cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  min-height:100vh;
-  color:white;
-  line-height: 1.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Tekstkleur */
+  color: #f2f5ff;
+
+  /* Nodig voor overlay + z-index */
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-/* Container = netjes centreren zonder flexbox/grid */
+/* Donkere overlay over achtergrond voor leesbaarheid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Alles boven overlay zetten */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== LAYOUT ========== */
 .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 18px;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 .site-header {
-  background-color: #111;
-  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* boven content */
+  background: rgba(10, 14, 26, 0.65);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
   margin: 0;
-  padding-top: 8px;
+  padding-top: 6px;
+  font-size: 28px;
+  letter-spacing: 0.3px;
 }
 
-/* Nav */
 .nav {
-  margin-top: 8px;
-  padding-bottom: 8px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .nav a {
-  color: white;
+  color: rgba(255,255,255,0.90);
   text-decoration: none;
-  margin-right: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
 .nav a:hover {
-  text-decoration: underline;
+  background: rgba(255,255,255,0.10);
 }
 
-/* Hero */
+/* ========== HERO ========== */
 .hero {
-  background-color: #fff;
-  padding: 24px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 70px 0 30px;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+}
+
+.hero p {
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.85);
+  max-width: 60ch;
 }
 
 .button {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 14px;
-  background-color: #111;
-  color: white;
   text-decoration: none;
-  border-radius: 6px;
+  color: #0b0f1d;
+  background: rgba(255,255,255,0.92);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.2s;
 }
 
 .button:hover {
-  opacity: 0.9;
+  transform: translateY(-1px);
+  background: #ffffff;
 }
 
-/* Sections */
+/* ========== SECTIONS: “GLASS” LOOK ========== */
 .section {
-  padding: 18px 0;
+  margin: 18px 0;
+}
+
+.section .container {
+  /* transparante professionele kaart */
+  background: rgba(18, 24, 44, 0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
 }
 
 .section h3 {
   margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 
-/* List */
+/* ========== LIST / LINKS ========== */
 .list {
+  margin: 10px 0 0;
   padding-left: 18px;
 }
 
-/* Cards */
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 14px;
-  margin-top: 12px;
-}
-
 .link {
-  color: #0047AB;
-  text-decoration: none;
+  color: rgba(255,255,255,0.92);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .link:hover {
-  text-decoration: underline;
+  color: #ffffff;
 }
 
-/* Footer */
+/* ========== PROJECT CARDS ========== */
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.card h4 {
+  margin: 0 0 8px;
+}
+
+/* ========== FOOTER ========== */
 .site-footer {
-  border-top: 1px solid #ddd;
-  padding: 12px 0;
+  margin-top: 20px;
+  padding: 20px 0 40px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .section .container {
+    padding: 18px;
+  }
 }

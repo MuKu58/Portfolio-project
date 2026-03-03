@@ -100,7 +100,7 @@ header, main, footer {
   padding: 8px 14px;
   border-radius: 12px;
 
-  background: transparent;           /* donkere binnenkant */
+  background: rgba(10,14,26,0.65);           /* donkere binnenkant */
   border: 2px solid transparent; /* ruimte voor gradient */
   
   background-clip: padding-box;
@@ -227,7 +227,7 @@ header, main, footer {
   position:absolute;
   inset:-3px;
   border-radius:22px;
-  background: linear-gardient(45deg,#00f0ff,#8a2eff,#ff2fd8,#00f0ff);
+  background: linear-gradient(45deg,#00f0ff,#8a2eff,#ff2fd8,#00f0ff);
   z-index:-1;
   filter: blur(20px);
   opacity:0.8;
